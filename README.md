@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="NovaNest Webhook Call Log Pipeline" width="100%"/>
+<img src="novanest-webhook-pipeline/assets/banner.svg" alt="NovaNest Webhook Call Log Pipeline" width="100%"/>
 
-<img src="assets/tagline.svg" alt="Webhooks that answer in milliseconds" width="80%"/>
+<img src="novanest-webhook-pipeline/assets/tagline.svg" alt="Webhooks that answer in milliseconds" width="80%"/>
 
 <br/>
 
@@ -19,12 +19,12 @@
 <br/>
 
 [![Watch Demo](https://img.shields.io/badge/WATCH_THE_DEMO-Loom-625DF5?style=for-the-badge&logo=loom&logoColor=white)](https://www.loom.com/share/75985b0632364804840d82b19f987200)
-[![Project Summary](https://img.shields.io/badge/PROJECT_SUMMARY-PDF-D93025?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](docs/NovaNest_Webhook_Pipeline_Project_Summary.pdf)
-[![Workflow](https://img.shields.io/badge/n8n_WORKFLOW-JSON-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)](workflow/novanest-call-log.json)
-[![Test Results](https://img.shields.io/badge/TEST_RESULTS-10%2F10-2EA44F?style=for-the-badge&logo=githubactions&logoColor=white)](docs/test-results.md)
-[![Screenshots](https://img.shields.io/badge/SCREENSHOTS-Evidence-0EA5E9?style=for-the-badge&logo=googlephotos&logoColor=white)](docs/screenshots)
+[![Project Summary](https://img.shields.io/badge/PROJECT_SUMMARY-PDF-D93025?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](novanest-webhook-pipeline/docs/NovaNest_Webhook_Pipeline_Project_Summary.pdf)
+[![Workflow](https://img.shields.io/badge/n8n_WORKFLOW-JSON-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)](novanest-webhook-pipeline/workflow/novanest-call-log.json)
+[![Test Results](https://img.shields.io/badge/TEST_RESULTS-10%2F10-2EA44F?style=for-the-badge&logo=githubactions&logoColor=white)](novanest-webhook-pipeline/docs/test-results.md)
+[![Screenshots](https://img.shields.io/badge/SCREENSHOTS-Evidence-0EA5E9?style=for-the-badge&logo=googlephotos&logoColor=white)](novanest-webhook-pipeline/docs/screenshots)
 
-<img src="assets/divider.svg" alt="" width="100%"/>
+<img src="novanest-webhook-pipeline/assets/divider.svg" alt="" width="100%"/>
 
 </div>
 
@@ -139,7 +139,7 @@ sequenceDiagram
 
 Custom Post-Call Analysis fields are read from `call.call_analysis` merged with `call.call_analysis.custom_analysis_data`.
 
-Full details: [`docs/field-mapping.md`](docs/field-mapping.md)
+Full details: [`novanest-webhook-pipeline/docs/field-mapping.md`](novanest-webhook-pipeline/docs/field-mapping.md)
 
 </details>
 
@@ -147,8 +147,8 @@ Full details: [`docs/field-mapping.md`](docs/field-mapping.md)
 
 ## 🚀 Quick start
 
-1. **Sheet.** Create a Google Sheet with a tab named `NovaNest Call Log` and paste the headers from [`sheet-headers.csv`](sheet-headers.csv) into row 1.
-2. **Import.** In n8n choose **Import from file** and select [`workflow/novanest-call-log.json`](workflow/novanest-call-log.json).
+1. **Sheet.** Create a Google Sheet with a tab named `NovaNest Call Log` and paste the headers from [`sheet-headers.csv`](novanest-webhook-pipeline/sheet-headers.csv) into row 1.
+2. **Import.** In n8n choose **Import from file** and select [`workflow/novanest-call-log.json`](novanest-webhook-pipeline/workflow/novanest-call-log.json).
 3. **Connect.** Open the two Google Sheets nodes (*Lookup call_id in Sheet* and *Append Row*), pick your own Google credential, document and sheet.
 4. **Activate.** Publish the workflow and copy the **Production** webhook URL.
 5. **Register.** In Retell open the agent, go to *Webhook settings*, paste the URL into **Agent Level Webhook URL**, and enable `call_started`, `call_ended`, `call_analyzed`.
@@ -184,7 +184,7 @@ Wait a few seconds between sends, because many writes to Google Sheets within on
 
 ## ✅ Test results
 
-Method: one full end-to-end real Retell web call, plus payload-injection tests with `curl.exe` (files in [`tests/payloads`](tests/payloads)). Additional real calls were skipped to save call credits.
+Method: one full end-to-end real Retell web call, plus payload-injection tests with `curl.exe` (files in [`tests/payloads`](novanest-webhook-pipeline/tests/payloads)). Additional real calls were skipped to save call credits.
 
 | ID | Test | Result |
 |---|---|---|
@@ -199,7 +199,7 @@ Method: one full end-to-end real Retell web call, plus payload-injection tests w
 | TC-009 | `follow_up_status` = `Pending` | ✅ Pass |
 | TC-010 | Failed execution visible | ✅ Pass |
 
-Evidence per test: [`docs/test-results.md`](docs/test-results.md)
+Evidence per test: [`novanest-webhook-pipeline/docs/test-results.md`](novanest-webhook-pipeline/docs/test-results.md)
 
 <a id="screenshots"></a>
 
@@ -207,24 +207,24 @@ Evidence per test: [`docs/test-results.md`](docs/test-results.md)
 
 <table>
   <tr>
-    <td align="center" width="50%"><img src="docs/screenshots/01-n8n-workflow-canvas.png" alt="Workflow canvas"/><br/><sub><b>Workflow canvas</b></sub></td>
-    <td align="center" width="50%"><img src="docs/screenshots/09-real-call-execution-success.png" alt="Real call execution"/><br/><sub><b>Real call: green end to end</b></sub></td>
+    <td align="center" width="50%"><img src="novanest-webhook-pipeline/docs/screenshots/01-n8n-workflow-canvas.png" alt="Workflow canvas"/><br/><sub><b>Workflow canvas</b></sub></td>
+    <td align="center" width="50%"><img src="novanest-webhook-pipeline/docs/screenshots/09-real-call-execution-success.png" alt="Real call execution"/><br/><sub><b>Real call: green end to end</b></sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="docs/screenshots/10-real-call-append-row-output.png" alt="Mapped output"/><br/><sub><b>Mapped output of the real call</b></sub></td>
-    <td align="center"><img src="docs/screenshots/13-google-sheet-with-real-call-row.png" alt="Sheet row"/><br/><sub><b>Google Sheet with the real call row</b></sub></td>
+    <td align="center"><img src="novanest-webhook-pipeline/docs/screenshots/10-real-call-append-row-output.png" alt="Mapped output"/><br/><sub><b>Mapped output of the real call</b></sub></td>
+    <td align="center"><img src="novanest-webhook-pipeline/docs/screenshots/13-google-sheet-with-real-call-row.png" alt="Sheet row"/><br/><sub><b>Google Sheet with the real call row</b></sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="docs/screenshots/04-duplicate-skipped-execution.png" alt="Duplicate skipped"/><br/><sub><b>Duplicate skipped</b></sub></td>
-    <td align="center"><img src="docs/screenshots/06-failed-execution-missing-call-id.png" alt="Failed execution"/><br/><sub><b>Failed execution is visible</b></sub></td>
+    <td align="center"><img src="novanest-webhook-pipeline/docs/screenshots/04-duplicate-skipped-execution.png" alt="Duplicate skipped"/><br/><sub><b>Duplicate skipped</b></sub></td>
+    <td align="center"><img src="novanest-webhook-pipeline/docs/screenshots/06-failed-execution-missing-call-id.png" alt="Failed execution"/><br/><sub><b>Failed execution is visible</b></sub></td>
   </tr>
   <tr>
-    <td align="center"><img src="docs/screenshots/14-retell-call-custom-analysis-and-transcript.png" alt="Retell analysis"/><br/><sub><b>Retell Post-Call Analysis fields</b></sub></td>
-    <td align="center"><img src="docs/screenshots/18-retell-webhook-events.png" alt="Webhook events"/><br/><sub><b>Retell webhook events</b></sub></td>
+    <td align="center"><img src="novanest-webhook-pipeline/docs/screenshots/14-retell-call-custom-analysis-and-transcript.png" alt="Retell analysis"/><br/><sub><b>Retell Post-Call Analysis fields</b></sub></td>
+    <td align="center"><img src="novanest-webhook-pipeline/docs/screenshots/18-retell-webhook-events.png" alt="Webhook events"/><br/><sub><b>Retell webhook events</b></sub></td>
   </tr>
 </table>
 
-<p align="center"><a href="docs/screenshots"><b>See all 18 screenshots →</b></a></p>
+<p align="center"><a href="novanest-webhook-pipeline/docs/screenshots"><b>See all 18 screenshots →</b></a></p>
 
 <a id="errors"></a>
 
@@ -266,6 +266,8 @@ Evidence per test: [`docs/test-results.md`](docs/test-results.md)
 
 ## 📁 Repo layout
 
+> The project files currently live inside the `novanest-webhook-pipeline/` subfolder. Links and images above point to that location.
+
 ```text
 novanest-webhook-pipeline/
 ├── assets/                  banner, tagline, divider, footer (animated SVG)
@@ -289,10 +291,10 @@ novanest-webhook-pipeline/
 
 <div align="center">
 
-<img src="assets/divider.svg" alt="" width="100%"/>
+<img src="novanest-webhook-pipeline/assets/divider.svg" alt="" width="100%"/>
 
 **Built by [Shaik Shahid](https://github.com/shaikshahid777)** for Retell AI Lesson 5: Webhooks, Post-Call Events and Automation Pipelines
 
-<img src="assets/footer.svg" alt="" width="100%"/>
+<img src="novanest-webhook-pipeline/assets/footer.svg" alt="" width="100%"/>
 
 </div>
