@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 44" width="900" height="44" role="img" aria-label="Rotating tagline">
+  <g font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="21" font-weight="600" text-anchor="middle" fill="#6366f1">
+    <text x="450" y="29" opacity="0">Webhooks that answer in milliseconds
+      <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.04;0.2;0.25;1" dur="12s" begin="0s" repeatCount="indefinite"/>
+    </text>
+    <text x="450" y="29" opacity="0">One call, one row, zero duplicates
+      <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.04;0.2;0.25;1" dur="12s" begin="3s" repeatCount="indefinite"/>
+    </text>
+    <text x="450" y="29" opacity="0">Missing data becomes N/A, never a silent blank
+      <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.04;0.2;0.25;1" dur="12s" begin="6s" repeatCount="indefinite"/>
+    </text>
+    <text x="450" y="29" opacity="0">Failed executions are always visible
+      <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.04;0.2;0.25;1" dur="12s" begin="9s" repeatCount="indefinite"/>
+    </text>
+  </g>
+</svg>

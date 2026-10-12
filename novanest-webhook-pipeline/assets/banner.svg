@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340" role="img" aria-label="NovaNest Webhook Call Log Pipeline: Retell AI to n8n to Google Sheets">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="0.55" stop-color="#1a1442"/>
+      <stop offset="1" stop-color="#062c43"/>
+    </linearGradient>
+    <linearGradient id="title" x1="0" y1="0" x2="1" y2="0" spreadMethod="reflect">
+      <stop offset="0" stop-color="#7dd3fc"/>
+      <stop offset="0.5" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#f0abfc"/>
+      <animateTransform attributeName="gradientTransform" type="translate" from="-0.6 0" to="0.6 0" dur="6s" repeatCount="indefinite"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
+    </pattern>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="45"/>
+    </filter>
+    <clipPath id="clip"><rect width="1200" height="340" rx="22"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#clip)">
+    <rect width="1200" height="340" fill="url(#bg)"/>
+    <rect width="1200" height="340" fill="url(#grid)"/>
+
+    <!-- drifting glow blobs -->
+    <circle cx="180" cy="80" r="110" fill="#6366f1" opacity="0.45" filter="url(#blur)">
+      <animate attributeName="cx" values="180;420;180" dur="14s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="80;220;80" dur="11s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1000" cy="260" r="120" fill="#06b6d4" opacity="0.40" filter="url(#blur)">
+      <animate attributeName="cx" values="1000;760;1000" dur="12s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="260;90;260" dur="15s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="640" cy="40" r="80" fill="#d946ef" opacity="0.30" filter="url(#blur)">
+      <animate attributeName="cx" values="640;900;640" dur="17s" repeatCount="indefinite"/>
+    </circle>
+
+    <g opacity="0">
+      <animate attributeName="opacity" from="0" to="1" dur="1.2s" fill="freeze"/>
+
+      <!-- pill -->
+      <rect x="56" y="38" width="410" height="28" rx="14" fill="#ffffff" fill-opacity="0.08" stroke="#a78bfa" stroke-opacity="0.6"/>
+      <text x="261" y="57" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600" letter-spacing="1.6" fill="#c4b5fd">RETELL AI  ·  LESSON 5  ·  WEBHOOKS &amp; AUTOMATION</text>
+
+      <!-- titles -->
+      <text x="60" y="132" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="66" font-weight="800" fill="url(#title)">NovaNest</text>
+      <text x="60" y="182" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="30" font-weight="600" fill="#e2e8f0">Webhook Call Log Pipeline</text>
+      <text x="60" y="218" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="17" fill="#94a3b8">Every analyzed call becomes one clean row, never twice.</text>
+      <text x="60" y="296" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="600" fill="#cbd5e1">Idempotent   ·   Response-first 200 OK   ·   Error-visible</text>
+
+      <!-- pipeline -->
+      <g font-family="Segoe UI, Helvetica, Arial, sans-serif" text-anchor="middle">
+        <!-- connectors -->
+        <path d="M730 170 L800 170" stroke="#38bdf8" stroke-width="2.5" stroke-dasharray="6 6" fill="none">
+          <animate attributeName="stroke-dashoffset" from="24" to="0" dur="1s" repeatCount="indefinite"/>
+        </path>
+        <path d="M940 170 L1010 170" stroke="#a78bfa" stroke-width="2.5" stroke-dasharray="6 6" fill="none">
+          <animate attributeName="stroke-dashoffset" from="24" to="0" dur="1s" repeatCount="indefinite"/>
+        </path>
+        <!-- packets -->
+        <circle r="6" fill="#38bdf8">
+          <animateMotion path="M730 170 L800 170" dur="1.6s" repeatCount="indefinite"/>
+        </circle>
+        <circle r="6" fill="#38bdf8">
+          <animateMotion path="M730 170 L800 170" dur="1.6s" begin="0.8s" repeatCount="indefinite"/>
+        </circle>
+        <circle r="6" fill="#c4b5fd">
+          <animateMotion path="M940 170 L1010 170" dur="1.6s" begin="0.4s" repeatCount="indefinite"/>
+        </circle>
+        <circle r="6" fill="#c4b5fd">
+          <animateMotion path="M940 170 L1010 170" dur="1.6s" begin="1.2s" repeatCount="indefinite"/>
+        </circle>
+
+        <!-- node 1 -->
+        <rect x="590" y="132" width="140" height="76" rx="16" fill="#111a33" stroke="#38bdf8" stroke-width="2">
+          <animate attributeName="stroke-opacity" values="1;0.35;1" dur="3s" repeatCount="indefinite"/>
+        </rect>
+        <text x="660" y="165" font-size="19" font-weight="700" fill="#f1f5f9">Retell AI</text>
+        <text x="660" y="188" font-size="11.5" fill="#94a3b8">call_analyzed</text>
+
+        <!-- node 2 -->
+        <rect x="800" y="132" width="140" height="76" rx="16" fill="#111a33" stroke="#a78bfa" stroke-width="2">
+          <animate attributeName="stroke-opacity" values="1;0.35;1" dur="3s" begin="1s" repeatCount="indefinite"/>
+        </rect>
+        <text x="870" y="165" font-size="19" font-weight="700" fill="#f1f5f9">n8n</text>
+        <text x="870" y="188" font-size="11.5" fill="#94a3b8">filter · dedupe · map</text>
+
+        <!-- node 3 -->
+        <rect x="1010" y="132" width="140" height="76" rx="16" fill="#111a33" stroke="#34d399" stroke-width="2">
+          <animate attributeName="stroke-opacity" values="1;0.35;1" dur="3s" begin="2s" repeatCount="indefinite"/>
+        </rect>
+        <text x="1080" y="165" font-size="17" font-weight="700" fill="#f1f5f9">Google Sheets</text>
+        <text x="1080" y="188" font-size="11.5" fill="#94a3b8">1 row per call</text>
+
+        <text x="870" y="252" font-size="13" fill="#64748b">call_started / call_ended are acknowledged and discarded</text>
+        <text x="870" y="274" font-size="13" fill="#64748b">duplicates are skipped, failures stay visible</text>
+      </g>
+    </g>
+  </g>
+</svg>

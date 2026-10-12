@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 130" width="1200" height="130" role="img" aria-label="Footer">
+  <defs>
+    <linearGradient id="w1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#w1)" opacity="0.30" d="M0 60 q150 -45 300 0 t300 0 t300 0 t300 0 t300 0 t300 0 V130 H0 Z">
+    <animateTransform attributeName="transform" type="translate" from="0 0" to="-600 0" dur="14s" repeatCount="indefinite"/>
+  </path>
+  <path fill="url(#w1)" opacity="0.45" d="M0 75 q150 -40 300 0 t300 0 t300 0 t300 0 t300 0 t300 0 V130 H0 Z">
+    <animateTransform attributeName="transform" type="translate" from="-600 0" to="0 0" dur="10s" repeatCount="indefinite"/>
+  </path>
+  <path fill="url(#w1)" opacity="0.85" d="M0 92 q150 -30 300 0 t300 0 t300 0 t300 0 t300 0 t300 0 V130 H0 Z">
+    <animateTransform attributeName="transform" type="translate" from="0 0" to="-600 0" dur="7s" repeatCount="indefinite"/>
+  </path>
+  <text x="600" y="118" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#ffffff">Built by Shaik Shahid  ·  Retell AI Lesson 5  ·  Webhooks, Post-Call Events &amp; Automation Pipelines</text>
+</svg>
